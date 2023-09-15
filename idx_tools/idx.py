@@ -38,7 +38,7 @@ class Idx:
                 file_path = cat_folder + "/" + file
 
                 img = plt.imread(file_path)
-                width, height = img.shape
+                width, height, n = img.shape
 
                 for x in range(0, width):
                     for y in range(0, height):
