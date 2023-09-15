@@ -22,9 +22,9 @@ class Idx:
         ind_categories = [os.path.isdir(source_folder + i) for i in categories]
         categories = [categories[i] for i, x in enumerate(ind_categories) if x]
 
-        data = array('B')
-        header = array('B')
-        label = array('B')
+        data = np.array('B')
+        header = np.array('B')
+        label = np.array('B')
         num_files = 0
         num_cat = 0
         for cat in categories:
@@ -42,9 +42,9 @@ class Idx:
 
                 for x in range(0, width):
                     for y in range(0, height):
-                        data.append(img[x, y])
+                        data = np.append(data ,img[x, y])
 
-                label.append(num_cat)
+                label = np.append(label, num_cat)
 
             num_cat += 1
 
